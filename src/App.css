@@ -1,0 +1,162 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  background: #f5f5f5;
+  color: #222;
+}
+
+.header {
+  background: #fff;
+  padding: 24px 5%;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.header p {
+  color: #666;
+  font-size: 14px;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+  display: grid;
+  gap: 24px;
+}
+
+.main-container.two-columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.main-container.single-column {
+  grid-template-columns: 1fr;
+}
+
+.post-list,
+.post-details {
+  background: #fff;
+  padding: 24px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  min-width: 0;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-heading h2 {
+  margin: 0;
+}
+
+button {
+  padding: 9px 16px;
+  border: 1px solid #333;
+  background: #222;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #444;
+}
+
+.post-card {
+  padding: 16px;
+  margin-bottom: 12px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.post-card:hover,
+.post-card.active {
+  border-color: #555;
+  background: #f8f8f8;
+}
+
+.post-card h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.post-card p,
+.post-body {
+  color: #666;
+  line-height: 1.6;
+}
+
+.post-label {
+  color: #777;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.post-details h2 {
+  text-transform: capitalize;
+  line-height: 1.4;
+}
+
+.comments-section {
+  margin-top: 30px;
+}
+
+.comment-card {
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.comment-card h4 {
+  margin: 0 0 6px;
+}
+
+.comment-card p {
+  color: #666;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.select-message,
+.error-message {
+  color: #777;
+  padding: 20px 0;
+}
+
+@media (max-width: 599px) {
+  .header {
+    padding: 18px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header h1 {
+    font-size: 22px;
+  }
+
+  .main-container {
+    margin: 20px auto;
+    padding: 0 12px;
+  }
+
+  .post-list,
+  .post-details {
+    padding: 16px;
+  }
+}
